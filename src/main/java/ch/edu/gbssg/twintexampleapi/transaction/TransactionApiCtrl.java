@@ -29,7 +29,6 @@ public class TransactionApiCtrl {
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         httpHeaders.set("Authorization", "Basic " + basicAuth);
 
-        // TransactionSettings transaction = new TransactionSettings("CHF", "Twint-Example", 100);
         HttpEntity<TransactionSettings> entity = new HttpEntity<TransactionSettings>(transactionSettings, httpHeaders);
 
         URI uri = restTemplate.postForLocation(url, entity);
