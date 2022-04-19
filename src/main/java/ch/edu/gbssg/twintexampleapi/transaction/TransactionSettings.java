@@ -7,6 +7,7 @@ public class TransactionSettings {
     private String refno;
     private int amount;
     private List<String> paymentMethods;
+    private TransactionUrl redirect;
 
 
     public TransactionSettings() {
@@ -18,6 +19,14 @@ public class TransactionSettings {
         this.refno = refno;
         this.amount = amount;
         this.paymentMethods = paymentMethods;
+    }
+
+    public TransactionUrl getRedirect() {
+        return this.redirect;
+    }
+
+    public void setRedirect(TransactionUrl redirect) {
+        this.redirect = redirect;
     }
 
     public String getCurrency() {
